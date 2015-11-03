@@ -8,7 +8,7 @@
   </parent>
   <groupId>org.openurp.edu.teacher</groupId>
   <artifactId>openurp-edu-teacher-webapp</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <name>OpenURP Edu Teacher Webapp</name>
 
   <properties>
