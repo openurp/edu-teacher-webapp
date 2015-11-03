@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mvc>
+  <profile name="openurp-edu-teacher-introduction" package="org.openurp.edu.teacher.introduction.action">
+    <url path="/introduction" suffix=""  style="seo" />
+    <interceptors>
+      <interceptor name="web.Interceptor.hibernate"/>
+      <interceptor name="web.Interceptor.flash"/>
+     </interceptors>
+  </profile>
+</mvc>

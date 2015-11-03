@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orm>
+  <mapping class="org.openurp.edu.teacher.introduction.model.DefaultMapping" />
+  <naming>
+    <profile package = "org.openurp.edu.teacher" pluralize="true" schema="edu_teacher">
+    </profile>
+  </naming>
+</orm>

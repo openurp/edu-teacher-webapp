@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.openurp.edu.teacher</groupId>
+    <artifactId>openurp-edu-teacher-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.openurp.edu.teacher</groupId>
+  <artifactId>openurp-edu-teacher-introduction</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>OpenURP Edu-Teacher Introduction</name>
+
+  <properties>
+    <bundle.symbolicName>org.openurp.edu.teacher.introduction</bundle.symbolicName>
+    <bundle.namespace>org.openurp.edu.teacher</bundle.namespace>
+    <openurp.base.version>0.0.3</openurp.base.version>
+    <openurp.hr.version>0.0.3</openurp.hr.version>
+    <openurp.ppl.version>0.0.3</openurp.ppl.version>
+  </properties>
+
+    <dependencies>
+      <dependency>
+        <groupId>org.openurp.edu.base</groupId>
+        <artifactId>openurp-edu-base-model</artifactId>
+        <version>${openurp.base.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openurp.hr.base</groupId>
+        <artifactId>openurp-hr-base-model</artifactId>
+        <version>${openurp.hr.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openurp.hr.info</groupId>
+        <artifactId>openurp-hr-info-model</artifactId>
+        <version>${openurp.hr.version}</version>
+      </dependency>
+     <dependency>
+        <groupId>org.openurp.people.contact</groupId>
+        <artifactId>openurp-people-contact-model</artifactId>
+        <version>${openurp.ppl.version}</version>
+      </dependency>
+    <dependency>
+      <groupId>org.beangle.webmvc</groupId>
+      <artifactId>beangle-webmvc-entity-plugin_2.11</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+   </dependencies>
+</project>
