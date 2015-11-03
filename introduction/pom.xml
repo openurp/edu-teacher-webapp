@@ -8,42 +8,44 @@
   </parent>
   <groupId>org.openurp.edu.teacher</groupId>
   <artifactId>openurp-edu-teacher-introduction</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>OpenURP Edu-Teacher Introduction</name>
 
   <properties>
     <bundle.symbolicName>org.openurp.edu.teacher.introduction</bundle.symbolicName>
     <bundle.namespace>org.openurp.edu.teacher</bundle.namespace>
-    <openurp.base.version>0.0.3</openurp.base.version>
-    <openurp.hr.version>0.0.3</openurp.hr.version>
-    <openurp.ppl.version>0.0.3</openurp.ppl.version>
+    <openurp.api.version>0.0.5</openurp.api.version>
   </properties>
 
     <dependencies>
       <dependency>
         <groupId>org.openurp.edu.base</groupId>
         <artifactId>openurp-edu-base-model</artifactId>
-        <version>${openurp.base.version}</version>
+        <version>${openurp.api.version}</version>
       </dependency>
       <dependency>
         <groupId>org.openurp.hr.base</groupId>
         <artifactId>openurp-hr-base-model</artifactId>
-        <version>${openurp.hr.version}</version>
+        <version>${openurp.api.version}</version>
       </dependency>
       <dependency>
         <groupId>org.openurp.hr.info</groupId>
         <artifactId>openurp-hr-info-model</artifactId>
-        <version>${openurp.hr.version}</version>
+        <version>${openurp.api.version}</version>
       </dependency>
      <dependency>
         <groupId>org.openurp.people.contact</groupId>
         <artifactId>openurp-people-contact-model</artifactId>
-        <version>${openurp.ppl.version}</version>
+        <version>${openurp.api.version}</version>
       </dependency>
     <dependency>
       <groupId>org.beangle.webmvc</groupId>
       <artifactId>beangle-webmvc-entity-plugin_2.11</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.openurp.platform.api</groupId>
+      <artifactId>openurp-platform-api-core</artifactId>
+      <version>${openurp.platform.version}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
