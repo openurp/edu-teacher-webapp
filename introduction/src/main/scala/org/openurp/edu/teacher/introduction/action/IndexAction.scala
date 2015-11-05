@@ -13,12 +13,20 @@ import org.openurp.hr.base.model.Staff
 import org.openurp.hr.info.model.EducationInfo
 import org.openurp.hr.info.model.DegreeInfo
 import org.openurp.platform.api.security.Securities
+import org.openurp.edu.teacher.introduction.model.Introduction
 
+@action("")
 class IndexAction(entityDao: EntityDao) extends ActionSupport {
 
-  def index(): String = {
-    val teacher = getStaff
-    val categories = entityDao.getAll(classOf[Category])
+  @mapping("{teacherId}")
+  def index(@param("teacherId") teacherId: Long): String = {
+    val teacher = entityDao.get(classOf[Staff], teacherId)
+    val builder = OqlBuilder.from(classOf[Introduction], "introduction")
+    builder.where("introduction.teacher =:t", teacher)
+    val intros = entityDao.search(builder)
+    put("teacher", teacher)
+    put("intros", intros)
+
     val builder_edu = OqlBuilder.from(classOf[EducationInfo], "eduInfo")
     builder_edu.where("eduInfo.staff =:t", teacher)
     builder_edu.where("eduInfo.endOn is null")
@@ -29,22 +37,10 @@ class IndexAction(entityDao: EntityDao) extends ActionSupport {
     builder_degree.where("degreeInfo.endOn is null")
     val degreeInfo = entityDao.search(builder_degree)
 
-    put("teacher", teacher)
-    put("categories", categories)
-
     put("eduIfo", eduIfo)
     put("degreeInfo", degreeInfo)
 
     forward()
-  }
-  
-  private def getStaff(): Staff = {
-    val staffs = entityDao.search(OqlBuilder.from(classOf[Staff], "s").where("s.code=:code", Securities.user))
-    if (staffs.isEmpty) {
-      throw new RuntimeException("Cannot find staff with code " + Securities.user)
-    } else {
-      staffs.head
-    }
   }
 
 }
