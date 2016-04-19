@@ -14,33 +14,27 @@
   <properties>
     <bundle.symbolicName>org.openurp.edu.teacher.introduction</bundle.symbolicName>
     <bundle.namespace>org.openurp.edu.teacher</bundle.namespace>
-    <openurp.api.version>0.0.5</openurp.api.version>
   </properties>
 
     <dependencies>
       <dependency>
-        <groupId>org.openurp.edu.base</groupId>
-        <artifactId>openurp-edu-base-model</artifactId>
+        <groupId>org.openurp.edu</groupId>
+        <artifactId>openurp-edu-base</artifactId>
         <version>${openurp.api.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.openurp.hr.base</groupId>
-        <artifactId>openurp-hr-base-model</artifactId>
-        <version>${openurp.api.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.openurp.hr.info</groupId>
-        <artifactId>openurp-hr-info-model</artifactId>
+        <groupId>org.openurp.hr</groupId>
+        <artifactId>openurp-hr-base</artifactId>
         <version>${openurp.api.version}</version>
       </dependency>
      <dependency>
-        <groupId>org.openurp.people.contact</groupId>
-        <artifactId>openurp-people-contact-model</artifactId>
+        <groupId>org.openurp.people</groupId>
+        <artifactId>openurp-people-contact</artifactId>
         <version>${openurp.api.version}</version>
       </dependency>
     <dependency>
       <groupId>org.beangle.webmvc</groupId>
-      <artifactId>beangle-webmvc-entity-plugin_2.11</artifactId>
+      <artifactId>beangle-webmvc-entity-plugin_2.12</artifactId>
     </dependency>
     <dependency>
       <groupId>org.openurp.platform.api</groupId>

@@ -27,27 +27,26 @@ class DefaultMapping extends Mapping {
   def binding(): Unit = {
     defaultIdGenerator("auto_increment")
 
-    bind[DegreeInfo].on(e => declare(
-      e.staff & e.beginOn are notnull,
-      e.conferralBy is length(200),
-      e.certificateNo is length(50),
-      e.major is length(100)))
-
-    bind[DutyInfo].on(e => declare(
-      e.staff & e.dutyType & e.dutyGrade & e.beginOn are notnull))
-
-    bind[PostInfo].on(e => declare(
-      e.staff & e.postType & e.postGrade & e.beginOn are notnull))
-
-    bind[SourceInfo].on(e => declare(
-      e.staff & e.workStartOn & e.employType & e.employOn are notnull))
-      
-    bind[EducationInfo].on(e => declare(
-       e.staff & e.beginOn are notnull,
-       e.school is length(200),
-       e.diplomaNo is length(50),
-       e.major is length(100)))
+    //    bind[DegreeInfo].on(e => declare(
+    //      e.staff & e.beginOn are notnull,
+    //      e.conferralBy is length(200),
+    //      e.certificateNo is length(50),
+    //      e.major is length(100)))
+    //
+    //    bind[DutyInfo].on(e => declare(
+    //      e.staff & e.dutyType & e.dutyGrade & e.beginOn are notnull))
+    //
+    //    bind[PostInfo].on(e => declare(
+    //      e.staff & e.postType & e.postGrade & e.beginOn are notnull))
+    //
+    //    bind[SourceInfo].on(e => declare(
+    //      e.staff & e.workStartOn & e.employType & e.employOn are notnull))
+    //      
+    //    bind[EducationInfo].on(e => declare(
+    //       e.staff & e.beginOn are notnull,
+    //       e.school is length(200),
+    //       e.diplomaNo is length(50),
+    //       e.major is length(100)))
   }
-
 
 }

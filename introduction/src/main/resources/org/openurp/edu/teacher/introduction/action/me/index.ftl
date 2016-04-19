@@ -21,7 +21,7 @@
 	   </tr>
 	   <tr>
 	     <td class="title">学位:</td>
-	     <td class="content">${(degreeInfo?first.degree.name)!}</td>
+	     <td class="content">${(eduIfo?first.degree.name)!}</td>
 	     <td class="title">学历:</td>
          <td class="content">${(eduIfo?first.educationDegree.name)!}</td>
 	   </tr>
