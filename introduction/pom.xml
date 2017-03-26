@@ -18,18 +18,23 @@
 
     <dependencies>
       <dependency>
-        <groupId>org.openurp.edu</groupId>
-        <artifactId>openurp-edu-base</artifactId>
+        <groupId>org.openurp.edu.base</groupId>
+        <artifactId>openurp-edu-base-api</artifactId>
         <version>${openurp.api.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.openurp.hr</groupId>
-        <artifactId>openurp-hr-base</artifactId>
+        <groupId>org.openurp.hr.base</groupId>
+        <artifactId>openurp-hr-base-api</artifactId>
+        <version>${openurp.api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openurp.hr.base</groupId>
+        <artifactId>openurp-hr-base-api</artifactId>
         <version>${openurp.api.version}</version>
       </dependency>
      <dependency>
-        <groupId>org.openurp.people</groupId>
-        <artifactId>openurp-people-contact</artifactId>
+        <groupId>org.openurp.people.contact</groupId>
+        <artifactId>openurp-people-contact-api</artifactId>
         <version>${openurp.api.version}</version>
       </dependency>
     <dependency>
